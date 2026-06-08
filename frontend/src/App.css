@@ -1,0 +1,192 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #dbeafe,
+      #e0f2fe,
+      #f8fafc
+    );
+}
+
+.container {
+  width: 90%;
+  max-width: 430px;
+
+ padding: 28px 40px;
+
+  border-radius: 30px;
+
+  background: rgba(255,255,255,0.55);
+
+  backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255,255,255,0.7);
+
+  box-shadow:
+    0 8px 40px rgba(0,0,0,0.08);
+
+  transition: 0.3s;
+}
+.container:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 14px 50px rgba(0,0,0,0.12);
+}
+
+h1 {
+  text-align: center;
+
+  margin-bottom: 35px;
+
+  font-size: 34px;
+
+  font-weight: 700;
+
+  background: linear-gradient(
+    to right,
+    #111827,
+    #374151
+  );
+
+  background-clip: text;
+
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+h2 {
+  margin-top: 28px;
+
+  margin-bottom: 15px;
+
+  color: #111827;
+
+  font-size: 22px;
+}
+
+p {
+  color: #6b7280;
+
+  text-align: center;
+}
+
+input {
+  width: 100%;
+
+  padding: 15px;
+
+  margin-top: 12px;
+
+  border-radius: 14px;
+
+  border: none;
+
+  background: rgba(255,255,255,0.7);
+
+  color: #111827;
+
+  font-size: 15px;
+
+  box-sizing: border-box;
+
+  transition: 0.3s;
+}
+
+input::placeholder {
+  color: #9ca3af;
+}
+
+input:focus {
+  outline: none;
+
+  box-shadow:
+    0 0 0 2px rgba(59,130,246,0.2);
+
+  background: white;
+}
+
+button {
+  width: 100%;
+
+  padding: 14px;
+
+  margin-top: 18px;
+
+  border: none;
+
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      #111827,
+      #030712
+    );
+
+  color: white;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.25s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 20px rgba(0,0,0,0.15);
+}
+
+.task-card {
+  margin-top: 18px;
+
+  padding: 18px;
+
+  border-radius: 18px;
+
+  background: rgba(255,255,255,0.65);
+
+  border: 1px solid rgba(255,255,255,0.6);
+
+  transition: 0.25s;
+}
+
+.task-card:hover {
+  transform: translateY(-2px);
+}
+
+.task-card h3 {
+  margin: 0 0 12px 0;
+
+  color: #111827;
+
+  font-size: 17px;
+}
+
+.task-card button {
+  margin-top: 10px;
+}
+
+hr {
+  border: none;
+
+  border-top: 1px solid rgba(0,0,0,0.08);
+
+  margin: 35px 0;
+}
