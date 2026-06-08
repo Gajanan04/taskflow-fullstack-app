@@ -13,9 +13,13 @@ app.use(morgan("dev"));
 
 app.use(
   cors({
-    origin: "*",
+    origin: "https://taskflow-fullstack-app-green.vercel.app",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
   })
 );
+
+
 app.use(express.json());
 app.use("/api/v1/auth", require("./routes/authRoutes"));
 app.use("/api/v1/tasks", require("./routes/taskRoutes"));
