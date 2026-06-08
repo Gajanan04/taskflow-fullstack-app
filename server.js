@@ -11,13 +11,31 @@ connectDB();
 const app = express();
 app.use(morgan("dev"));
 
-app.use(
-  cors({
-    origin: "https://taskflow-fullstack-app-green.vercel.app",
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true,
-  })
-);
+const corsOptions = {
+  origin: "https://taskflow-fullstack-app-green.vercel.app",
+  credentials: true,
+};
+
+app.use(cors(corsOptions));
+
+app.use((req, res, next) => {
+  res.header(
+    "Access-Control-Allow-Origin",
+    "https://taskflow-fullstack-app-green.vercel.app"
+  );
+
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+  );
+
+  res.header(
+    "Access-Control-Allow-Methods",
+    "GET, POST, PUT, DELETE, OPTIONS"
+  );
+
+  next();
+});
 
 
 app.use(express.json());
