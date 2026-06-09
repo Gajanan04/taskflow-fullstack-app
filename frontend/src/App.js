@@ -17,7 +17,7 @@ function App() {
   const registerUser = async () => {
     try {
       const res = await axios.post(
-        "https://taskflow-fullstack-app-sc8y.onrender.com/api/v1/auth/register",
+        "https://taskflow-fullstack-app-ac8y.onrender.com/api/v1/auth/register",
         {
           name,
           email,
@@ -35,7 +35,7 @@ function App() {
   const loginUser = async () => {
     try {
       const res = await axios.post(
-        "https://taskflow-fullstack-app-sc8y.onrender.com/api/v1/auth/login",
+        "https://taskflow-fullstack-app-ac8y.onrender.com/api/v1/auth/login",
         {
           email,
           password,
@@ -54,7 +54,7 @@ function App() {
   const createTask = async () => {
     try {
       await axios.post(
-        "https://taskflow-fullstack-app-sc8y.onrender.com/api/v1/tasks",
+        "https://taskflow-fullstack-app-ac8y.onrender.com/api/v1/tasks",
         {
           title: task,
           description: task,
@@ -76,7 +76,7 @@ function App() {
   const getTasks = async () => {
     try {
       const res = await axios.get(
-        "https://taskflow-fullstack-app-sc8y.onrender.com/api/v1/tasks",
+        "https://taskflow-fullstack-app-ac8y.onrender.com/api/v1/tasks",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -92,7 +92,7 @@ function App() {
     const deleteTask = async (id) => {
   try {
     await axios.delete(
-      `https://taskflow-fullstack-app-sc8y.onrender.com/api/v1/tasks/${id}`,
+      `https://taskflow-fullstack-app-ac8y.onrender.com/api/v1/tasks/${id}`,
       {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -109,7 +109,7 @@ function App() {
       const updateTask = async (id) => {
   try {
     await axios.put(
-      `https://taskflow-fullstack-app-sc8y.onrender.com/api/v1/tasks/${id}`,
+      `https://taskflow-fullstack-app-ac8y.onrender.com/api/v1/tasks/${id}`,
       {
         title: "Updated From Frontend",
         description: "Frontend Updated Task",
